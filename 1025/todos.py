@@ -23,34 +23,30 @@ def verifica(lista, algoritmo="sin algoritmo"):
             break
 
 
+def obtener_tiempo (nombre, funcion, lista):
+    desordenada = lista.copy()
+    tiempo_inicio = time.perf_counter_ns()
+    ordenada = funcion(desordenada)
+    tiempo_fin = time.perf_counter_ns()
+    # Micro segundos
+    duracion = (tiempo_fin - tiempo_inicio) / 1000
+    verifica(ordenada, nombre)
+    return duracion
+
 def main():
     """
     Función principal
     """
     lista = [random.randint(inicio,fin) for _ in range(cantidad_de_elementos) ]
 
-    desordenada = lista.copy()
-    tiempo_inicio = time.perf_counter_ns()
-    ordenada = qs(desordenada)
-    tiempo_fin = time.perf_counter_ns()
-    duracion_qs = (tiempo_fin - tiempo_inicio) / 1000  # Convirtiendo de ns a us
-    verifica(ordenada, "Quicksort")
-
-    desordenada = lista.copy()
-    tiempo_inicio = time.perf_counter_ns()
-    ordenada = ms(desordenada)
-    tiempo_fin = time.perf_counter_ns()
-    duracion_ms = (tiempo_fin - tiempo_inicio) / 1000  # Convirtiendo de ns a us
-    verifica(ordenada, "Merge sort")
+    duracion_qs = obtener_tiempo("Quicksort", qs, lista)
+    duracion_ms = obtener_tiempo("Merge sort", ms, lista)
 
     with open("tiempos.csv","w", encoding="utf-8") as archivo:
         archivo.write("Algoritmo,Cantidad de elementos,Tiempo,Inicio,Fin\n")
         archivo.write(f"Quicksort,{cantidad_de_elementos:.4f},{duracion_qs},{inicio},{fin}\n")
         archivo.write(f"Merge sort,{cantidad_de_elementos:.4f},{duracion_ms},{inicio},{fin}\n")
 
-    #print(f"La función se ejecutó en: {duracion:.4f} segundos.")
-    #print("Lista desordenada", lista)
-    #print("Lista ordenada", ordenada)
 
 
 if __name__ == "__main__":
