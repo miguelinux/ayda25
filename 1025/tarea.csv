@@ -1,12 +1,11 @@
-Nombre,Algoritmo
-Alan Eduardo Vazquez Mora,Ordenamiento de Burbuja (Bubble Sort) 🫧
-Carlos Jesus Olea Diaz,Ordenamiento por Inserción (Insertion Sort)
-Eduardo Augusto Alemán Hernández,Ordenamiento por Montículos (Heapsort)
-Emmanuel Vera Sánchez,Ordenamiento por Fusión (Mergesort)
-Felix Emilio Ramos Scalabrin,Ordenamiento Shell (Shellsort)
-Francisco Miguel Gonzalez Jimenez,Ordenamiento por Selección (Selection Sort)
-Giovanna Berenice Torres Huerta,Ordenamiento por Conteo (Counting Sort)
-Guillermo Eliseo Guzman Lopez,Ordenamiento por Cubetas o Cajas (Bucket Sort)
-Luis Daniel Sainz Gómez,Ordenamiento Rápido (Quicksort) 🚀
-,
-,Ordenamiento Radix (Radix Sort)
+Cantidad de Elementos,Algoritmo,Éxito,Tiempo (microsegundos)
+100, Quick Sort, Sí, 161.2
+100, Merge Sort, Sí, 179.7
+1_000, Quick Sort, Sí, 1_335.4
+1_000, Merge Sort, Sí, 1_322.6
+10_000, Quick Sort, Sí, 16_059.8
+10_000, Merge Sort, Sí, 13_398.7
+100_000, Quick Sort, Sí, 193_625.6
+100_000, Merge Sort, Sí, 119_395.9
+1_000_000, Quick Sort, Sí, 2_824_530.4
+1_000_000, Merge Sort, Sí, 1_255_130.8
