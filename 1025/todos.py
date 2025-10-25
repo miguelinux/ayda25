@@ -5,13 +5,17 @@ Algoritmo de Ordenamiento FULANO
 """
 import random
 import time
+import os
 
 from quicksort import ordenar as qs
 from merge_sort import ordenar as ms
 
-cantidad_de_elementos = 100
+# 100, 1_000, 10_000, 100_000, 1_000_000
+cantidad_de_elementos = 1_000_000
 inicio = 0
-fin = 100
+fin = cantidad_de_elementos
+
+nombre_de_archivo_de_tiempos = "tiempos.csv"
 
 def verifica(lista, algoritmo="sin algoritmo"):
     mayor = -10;
@@ -42,8 +46,13 @@ def main():
     duracion_qs = obtener_tiempo("Quicksort", qs, lista)
     duracion_ms = obtener_tiempo("Merge sort", ms, lista)
 
-    with open("tiempos.csv","w", encoding="utf-8") as archivo:
-        archivo.write("Algoritmo,Cantidad de elementos,Tiempo,Inicio,Fin\n")
+    es_nuevo = True
+    if os.path.exists(nombre_de_archivo_de_tiempos):
+        es_nuevo = False
+
+    with open(nombre_de_archivo_de_tiempos,"a", encoding="utf-8") as archivo:
+        if es_nuevo:
+            archivo.write("Algoritmo,Cantidad de elementos,Tiempo,Inicio,Fin\n")
         archivo.write(f"Quicksort,{cantidad_de_elementos:.4f},{duracion_qs},{inicio},{fin}\n")
         archivo.write(f"Merge sort,{cantidad_de_elementos:.4f},{duracion_ms},{inicio},{fin}\n")
 
