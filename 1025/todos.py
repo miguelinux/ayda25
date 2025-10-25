@@ -7,27 +7,46 @@ import random
 import time
 
 from quicksort import ordenar as qs
+from merge_sort import ordenar as ms
 
 cantidad_de_elementos = 100
 inicio = 0
 fin = 100
+
+def verifica(lista, algoritmo="sin algoritmo"):
+    mayor = -10;
+    for elemento in lista:
+        if elemento >= mayor:
+            mayor = elemento:
+        else:
+            print("No esta ordenado con", algoritmo)
+            break
+
 
 def main():
     """
     Función principal
     """
     lista = [random.randint(inicio,fin) for _ in range(cantidad_de_elementos) ]
-    #ordenada = lista.copy()
 
-    tiempo_inicio = time.time()
-    ordenada = qs(lista)
-    tiempo_fin = time.time()
+    desordenada = lista.copy()
+    tiempo_inicio = time.perf_counter_ns()
+    ordenada = qs(desordenada)
+    tiempo_fin = time.perf_counter_ns()
+    duracion_qs = (tiempo_fin_ns - tiempo_inicio_ns) / 1000  # Convirtiendo de ns a us
+    verifica(ordenada, "Quicksort")
 
-    tiempo_qs = tiempo_fin - tiempo_inicio
+    desordenada = lista.copy()
+    tiempo_inicio_ns = time.perf_counter_ns()
+    ordenada = ms(desordenada)
+    tiempo_fin_ns = time.perf_counter_ns()
+    duracion_ms = (tiempo_fin_ns - tiempo_inicio_ns) / 1000  # Convirtiendo de ns a us
+    verifica(ordenada, "Merge sort")
 
     with open("tiempos.csv","w", encoding="utf-8") as archivo:
         archivo.write("Algoritmo,Cantidad de elementos,Tiempo,Inicio,Fin\n")
         archivo.write(f"Quicksort,{cantidad_de_elementos:.4f},{tiempo_qs},{inicio},{fin}\n")
+        archivo.write(f"Merge sort,{cantidad_de_elementos:.4f},{tiempo_ms},{inicio},{fin}\n")
 
     #print(f"La función se ejecutó en: {duracion:.4f} segundos.")
     #print("Lista desordenada", lista)
