@@ -33,20 +33,20 @@ def main():
     tiempo_inicio = time.perf_counter_ns()
     ordenada = qs(desordenada)
     tiempo_fin = time.perf_counter_ns()
-    duracion_qs = (tiempo_fin_ns - tiempo_inicio_ns) / 1000  # Convirtiendo de ns a us
+    duracion_qs = (tiempo_fin - tiempo_inicio) / 1000  # Convirtiendo de ns a us
     verifica(ordenada, "Quicksort")
 
     desordenada = lista.copy()
-    tiempo_inicio_ns = time.perf_counter_ns()
+    tiempo_inicio = time.perf_counter_ns()
     ordenada = ms(desordenada)
-    tiempo_fin_ns = time.perf_counter_ns()
-    duracion_ms = (tiempo_fin_ns - tiempo_inicio_ns) / 1000  # Convirtiendo de ns a us
+    tiempo_fin = time.perf_counter_ns()
+    duracion_ms = (tiempo_fin - tiempo_inicio) / 1000  # Convirtiendo de ns a us
     verifica(ordenada, "Merge sort")
 
     with open("tiempos.csv","w", encoding="utf-8") as archivo:
         archivo.write("Algoritmo,Cantidad de elementos,Tiempo,Inicio,Fin\n")
-        archivo.write(f"Quicksort,{cantidad_de_elementos:.4f},{tiempo_qs},{inicio},{fin}\n")
-        archivo.write(f"Merge sort,{cantidad_de_elementos:.4f},{tiempo_ms},{inicio},{fin}\n")
+        archivo.write(f"Quicksort,{cantidad_de_elementos:.4f},{duracion_qs},{inicio},{fin}\n")
+        archivo.write(f"Merge sort,{cantidad_de_elementos:.4f},{duracion_ms},{inicio},{fin}\n")
 
     #print(f"La función se ejecutó en: {duracion:.4f} segundos.")
     #print("Lista desordenada", lista)
