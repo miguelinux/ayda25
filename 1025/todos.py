@@ -52,9 +52,9 @@ def main():
 
     with open(nombre_de_archivo_de_tiempos,"a", encoding="utf-8") as archivo:
         if es_nuevo:
-            archivo.write("Algoritmo,Cantidad de elementos,Tiempo,Inicio,Fin\n")
-        archivo.write(f"Quicksort,{cantidad_de_elementos:.4f},{duracion_qs},{inicio},{fin}\n")
-        archivo.write(f"Merge sort,{cantidad_de_elementos:.4f},{duracion_ms},{inicio},{fin}\n")
+            archivo.write("Algoritmo,Cantidad de elementos,Tiempo\n")
+        archivo.write(f"Quicksort,{cantidad_de_elementos:_},{duracion_qs:_}\n")
+        archivo.write(f"Merge sort,{cantidad_de_elementos:_},{duracion_ms:_}\n")
 
 
 
