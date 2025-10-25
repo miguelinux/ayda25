@@ -17,7 +17,7 @@ def verifica(lista, algoritmo="sin algoritmo"):
     mayor = -10;
     for elemento in lista:
         if elemento >= mayor:
-            mayor = elemento:
+            mayor = elemento
         else:
             print("No esta ordenado con", algoritmo)
             break
