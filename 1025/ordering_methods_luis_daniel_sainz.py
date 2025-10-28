@@ -4,7 +4,7 @@ import random
 import time
 import csv
 # we take the methods from other libraries
-from quick_sort import ordenar as quick_sort
+from quick_sort import sort as quick_sort
 from merge_sort import ordenar as merge_sort
 from insertion_sort import sort as insertion_sort
 
