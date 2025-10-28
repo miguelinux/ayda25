@@ -7,7 +7,7 @@ import random
 import time
 import os
 
-from quicksort import ordenar as qs
+from quick_sort import ordenar as qs
 from merge_sort import ordenar as ms
 
 # 100, 1_000, 10_000, 100_000, 1_000_000
