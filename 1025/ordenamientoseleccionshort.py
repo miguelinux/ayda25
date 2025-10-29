@@ -2,7 +2,7 @@
 # vi: set shiftwidth=4 tabstop=8 expandtab:
 """
 Algoritmo de Ordenamiento por Selección (Selection Sort)
-
+Trabajo en clase
 """
 import random
 import time
