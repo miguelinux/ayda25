@@ -10,7 +10,7 @@ cantidad_de_elementos = 100
 inicio = 0
 fin = 100
 
-def bucket_sort(arr: list) -> list:
+def ordenar(arr: list) -> list:
     # Si la lista está vacía o tiene un solo elemento, no hay nada que ordenar
     if len(arr) <= 1:
         return arr
@@ -58,7 +58,7 @@ def main():
     tiempo_inicio_ns = time.perf_counter_ns()
 
     # Ordenación
-    ordenada = bucket_sort(ordenada)
+    ordenada = ordenar(ordenada)
 
     tiempo_fin_ns = time.perf_counter_ns()
 
