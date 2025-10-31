@@ -68,7 +68,7 @@ def main():
     # Imprimir resultados
     print("Lista desordenada:", lista)
     print("Lista ordenada:", ordenada)
-    print(f"La función se ejecutó en: {duracion_s:.5f} segundos.")
+    print(f"La función se ejecutó en: {duracion_s:.6f} segundos.")
 
 if __name__ == "__main__":
     main()
