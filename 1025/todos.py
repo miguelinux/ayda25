@@ -12,7 +12,7 @@ from merge_sort import ordenar as ms
 from seleccionshort import ordenar as ss
 
 # 100, 1_000, 10_000, 100_000, 1_000_000
-cantidad_de_elementos = 1_000_000
+cantidad_de_elementos = 100
 inicio = 0
 fin = cantidad_de_elementos
 
@@ -44,15 +44,10 @@ def main():
     """
     lista = [random.randint(inicio,fin) for _ in range(cantidad_de_elementos) ]
     print(f"Ordenando {cantidad_de_elementos:_} elementos")
-    #duracion_qs = obtener_tiempo("Quicksort", qs, lista)
-    print("-----")
-    #duracion_ms = obtener_tiempo("Merge sort", ms, lista)
-    print("-----")
+    duracion_qs = obtener_tiempo("Quicksort", qs, lista)
+    duracion_ms = obtener_tiempo("Merge sort", ms, lista)
     duracion_ss = obtener_tiempo("Selection sort", ss, lista)
-    print("-----")
-    #print(f"Quicksort duró {duracion_qs:_} microsegundos")
-    #print(f"Merge sort duró {duracion_ms:_} microsegundos")
-    print(f"Selection sort duró {duracion_ss:_} microsegundos")
+    
    
     es_nuevo = True
     if os.path.exists(nombre_de_archivo_de_tiempos):
@@ -60,13 +55,13 @@ def main():
     with open(nombre_de_archivo_de_tiempos,"a", encoding="utf-8") as archivo:
         if es_nuevo:
             archivo.write("Algoritmo,Cantidad de elementos,Tiempo\n")
-            #archivo.write(f"Quicksort,{cantidad_de_elementos:_},{duracion_qs:_}\n")
-            #archivo.write(f"Merge sort,{cantidad_de_elementos:_},{duracion_ms:_}\n")
+            archivo.write(f"Quicksort,{cantidad_de_elementos:_},{duracion_qs:_}\n")
+            archivo.write(f"Merge sort,{cantidad_de_elementos:_},{duracion_ms:_}\n")
             archivo.write(f"Selection sort,{cantidad_de_elementos:_},{duracion_ss:_}\n")
         else:
-            #archivo.write("Algoritmo,Cantidad de elementos,Tiempo\n")
-            #archivo.write(f"Quicksort,{cantidad_de_elementos:_},{duracion_qs:_}\n")
-            #archivo.write(f"Merge sort,{cantidad_de_elementos:_},{duracion_ms:_}\n")
+            archivo.write("Algoritmo,Cantidad de elementos,Tiempo\n")
+            archivo.write(f"Quicksort,{cantidad_de_elementos:_},{duracion_qs:_}\n")
+            archivo.write(f"Merge sort,{cantidad_de_elementos:_},{duracion_ms:_}\n")
             archivo.write(f"Selection sort,{cantidad_de_elementos:_},{duracion_ss:_}\n")
 
 if __name__ == "__main__":
