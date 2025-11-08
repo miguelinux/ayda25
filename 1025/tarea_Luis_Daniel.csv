@@ -1,0 +1,12 @@
+Cantidad de Elementos,Algoritmo,Éxito,Tiempo (microsegundos)
+100, Quick Sort, Sí, 243.8
+100, Merge Sort, Sí, 278.5
+100, Insertion Sort, Sí, 329.9
+1_000, Quick Sort, Sí, 2_508.7
+1_000, Merge Sort, Sí, 2_349.9
+1_000, Insertion Sort, Sí, 29_453.6
+10_000, Quick Sort, Sí, 24_422.1
+10_000, Merge Sort, Sí, 30_215.0
+10_000, Insertion Sort, Sí, 2_454_215.1
+100_000, Quick Sort, Sí, 220_806.4
+100_000, Merge Sort, Sí, 135_505.3
