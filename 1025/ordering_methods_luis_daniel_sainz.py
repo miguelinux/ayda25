@@ -36,7 +36,7 @@ def save_results(items_amount:int, algorithm_name:str, ordered:bool, total_time:
         file.write(f"{items_amount:_}, {algorithm_name}, {"Sí" if ordered else "No"}, {total_time:_}\n")
 
 def main():
-    items_amounts = (100, 1_000, 10_000, 100_000, 1_000_000)
+    items_amounts = (100, 1_000, 10_000, 100_000)
     algorithms = (
         ("Quick Sort", quick_sort),
         ("Merge Sort", merge_sort),
