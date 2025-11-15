@@ -5,7 +5,7 @@
 import random
 
 # 100, 1_000, 10_000, 100_000, 1_000_000
-cantidad_de_elementos = 100_000
+cantidad_de_elementos = 100
 inicio = 0
 fin = cantidad_de_elementos
 
@@ -63,7 +63,7 @@ def main():
     elemento_a_buscar = random.choice(lista)
     lista.sort() 
     elemento_a_buscar = random.choice(lista)
-
+    #PARA LA BUSQUEDA BINARIA SE NECESITA UNA LISTA ORDENADA
     indice = busqueda_binaria(lista, elemento_a_buscar)
     print(f"Buscando el elemento {elemento_a_buscar} en una lista ordenada de {cantidad_de_elementos:_} elementos")
     print(f"Lista ordenada: {lista}")
