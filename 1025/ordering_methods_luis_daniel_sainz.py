@@ -4,9 +4,12 @@ import random
 import time
 import csv
 # we take the methods from other libraries
-from quick_sort import sort as quick_sort
-from merge_sort import ordenar as merge_sort
+from bubble_sort import ordenar as bubble_sort
+from heapsort import ordenar as heap_sort
 from insertion_sort import sort as insertion_sort
+from merge_sort import ordenar as merge_sort
+from quick_sort import sort as quick_sort
+from seleccionshort import ordenar as selection_sort
 
 # create a list of length n (items_amount) full of random integers
 def random_list(items_amount:int) -> list:
@@ -32,28 +35,33 @@ def verification(ordered_list:list) -> bool:
 
 # append results in the archive
 def save_results(items_amount:int, algorithm_name:str, ordered:bool, total_time:float):
-    with open('tarea.csv', 'a', newline='', encoding='utf-8') as file:
-        file.write(f"{items_amount:_}, {algorithm_name}, {"Sí" if ordered else "No"}, {total_time:_}\n")
+    with open('tiempos_luis_daniel_sainz.csv', 'a', newline='', encoding='utf-8') as file:
+        file.write(f"{items_amount:_},{algorithm_name},{"Sí" if ordered else "No"},{total_time:_}\n")
 
 def main():
     items_amounts = (100, 1_000, 10_000, 100_000, 1_000_000)
     algorithms = (
-        ("Quick Sort", quick_sort),
-        ("Merge Sort", merge_sort),
-        ("Insertion Sort", insertion_sort)
+        ("Bubble Sort", bubble_sort, False),
+        ("Heap Sort", heap_sort, True),
+        ("Insertion Sort", insertion_sort, False),
+        ("Merge Sort", merge_sort, True),
+        ("Quick Sort", quick_sort, True),
+        ("Selection Sort", selection_sort, False),
         )
     # create a new archive for the results
-    with open('tarea.csv', 'w', newline='', encoding='utf-8') as file:
-        csv.writer(file).writerow(["Cantidad de Elementos", "Algoritmo", "Éxito", "Tiempo (microsegundos)"])
+    with open('tiempos_luis_daniel_sainz.csv', 'w', newline='', encoding='utf-8') as file:
+        csv.writer(file).writerow(["Elementos", "Algoritmo", "Éxito", "Tiempo (ms)"])
 
     for amount in items_amounts:
         for algorithm in algorithms:
             algorithm_name = algorithm[0]
             algorithm_func = algorithm[1]
-            unordered_list = random_list(amount) 
-            ordered_list, total_time = ordering(unordered_list, algorithm_func)
-            ordered = verification(ordered_list)
-            save_results(amount, algorithm_name, ordered, total_time)
+            fast_with_million = algorithm[2]
+            if(not(amount == 1_000_000 and not fast_with_million)):
+                unordered_list = random_list(amount) 
+                ordered_list, total_time = ordering(unordered_list, algorithm_func)
+                ordered = verification(ordered_list)
+                save_results(amount, algorithm_name, ordered, total_time)
 
 if __name__ == "__main__":
     main()
