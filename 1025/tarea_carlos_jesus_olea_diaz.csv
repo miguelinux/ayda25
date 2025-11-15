@@ -1,0 +1,24 @@
+Algoritmo,Cantidad de elementos,Tiempo
+Merge sort,100,191.5
+Counting sort,100,23.875
+Bubble sort,100,307.666
+Heapsort,100,131.375
+Selection sort,100,171.625
+Algoritmo,Cantidad de elementos,Tiempo
+Merge sort,1_000,1_412.167
+Counting sort,1_000,244.167
+Bubble sort,1_000,33_995.459
+Heapsort,1_000,1_900.375
+Selection sort,1_000,15_807.083
+Algoritmo,Cantidad de elementos,Tiempo
+Merge sort,10_000,12_907.541
+Counting sort,10_000,2_323.167
+Bubble sort,10_000,3_669_196.083
+Heapsort,10_000,28_129.417
+Selection sort,10_000,1_646_015.542
+Algoritmo,Cantidad de elementos,Tiempo
+Merge sort,100_000,130_099.166
+Counting sort,100_000,24_764.875
+Bubble sort,100_000,369_221_035.708
+Heapsort,100_000,367_483.709
+Selection sort,100_000,155_540_503.541
