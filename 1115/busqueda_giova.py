@@ -43,9 +43,9 @@ def busqueda_binaria(lista, objetivo):
 def main():
     lista = [random.randint(inicio,fin) for _ in range(cantidad_de_elementos) ]
     elemento_a_buscar = random.choice(lista)
+
     #lista.sort()  # Aseguramos que la lista esté ordenada para la búsqueda
     print(f"Buscando el elemento {elemento_a_buscar} en una lista de {cantidad_de_elementos:_} elementos")
-        
     indice = busqueda_secuencial(lista, elemento_a_buscar)
 
     if indice != -1:
@@ -59,7 +59,7 @@ def main():
     elemento_a_buscar = random.choice(lista)
     lista.sort() 
     elemento_a_buscar = random.choice(lista)
-    #PARA LA BUSQUEDA BINARIA SE NECESITA UNA LISTA ORDENADA
+    """PARA LA BUSQUEDA BINARIA SE NECESITA UNA LISTA ORDENADA"""
     indice = busqueda_binaria(lista, elemento_a_buscar)
     print(f"Buscando el elemento {elemento_a_buscar} en una lista ordenada de {cantidad_de_elementos:_} elementos")
     print(f"Lista ordenada: {lista}")
