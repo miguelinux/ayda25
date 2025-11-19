@@ -34,3 +34,11 @@ Elementos,Algoritmo,Éxito,Tiempo (µs)
 100_000,Insertion Sort,Sí,179_213_194.79
 100_000,Merge Sort,Sí,235_661.21
 100_000,Quick Sort,Sí,124_489.29
+100_000,Selection Sort,Sí,165_788_054.79
+100_000,Shell Sort,Sí,364_634.08
+1_000_000,Bucket Sort,Sí,274_137.50
+1_000_000,Counting Sort,Sí,450_922.58
+1_000_000,Heap Sort,Sí,4_825_581.08
+1_000_000,Merge Sort,Sí,2_888_630.83
+1_000_000,Quick Sort,Sí,1_600_283.08
+1_000_000,Shell Sort,Sí,6_812_692.58
