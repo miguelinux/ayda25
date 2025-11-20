@@ -9,16 +9,6 @@ cantidad_de_elementos = 1_000
 inicio = 0
 fin = cantidad_de_elementos
 
-def busqueda_secuencial(lista, objetivo):
-    """
-    Busca un elemento en la lista de forma secuencial.
-    Regresa el índice si lo encuentra, de lo contrario -1.
-    """
-    for indice in range(len(lista)):
-        if lista[indice] == objetivo:
-            return indice
-    return -1
-   
 def busqueda_binaria(lista, objetivo):
     """
     Busca un elemento usando búsqueda binaria.
@@ -39,7 +29,15 @@ def busqueda_binaria(lista, objetivo):
             inicio = medio + 1
 
     return -1
-
+def busqueda_secuencial(lista, objetivo):
+    """
+    Busca un elemento en la lista de forma secuencial.
+    Regresa el índice si lo encuentra, de lo contrario -1.
+    """
+    for indice in range(len(lista)):
+        if lista[indice] == objetivo:
+            return indice
+    return -1
 def main():
     lista = [random.randint(inicio,fin) for _ in range(cantidad_de_elementos) ]
     elemento_a_buscar = random.choice(lista)
