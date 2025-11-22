@@ -5,11 +5,14 @@ import time
 import csv
 # we take the methods from other libraries
 from bubble_sort import ordenar as bubble_sort
+from bucket_sort import ordenar as bucket_sort
+from countingsort import ordenar as counting_sort
 from heapsort import ordenar as heap_sort
 from insertion_sort import sort as insertion_sort
 from merge_sort import ordenar as merge_sort
 from quick_sort import sort as quick_sort
 from seleccionshort import ordenar as selection_sort
+from shellsort import ordenar as shell_sort
 
 # create a list of length n (items_amount) full of random integers
 def random_list(items_amount:int) -> list:
@@ -42,11 +45,14 @@ def main():
     items_amounts = (100, 1_000, 10_000, 100_000, 1_000_000)
     algorithms = (
         ("Bubble Sort", bubble_sort, False),
+        ("Bucket Sort", bucket_sort, True),
+        ("Counting Sort", counting_sort, True),
         ("Heap Sort", heap_sort, True),
         ("Insertion Sort", insertion_sort, False),
         ("Merge Sort", merge_sort, True),
         ("Quick Sort", quick_sort, True),
         ("Selection Sort", selection_sort, False),
+        ("Shell Sort", shell_sort, False),
         )
     # create a new archive for the results
     with open('tiempos_luis_daniel_sainz.csv', 'w', newline='', encoding='utf-8') as file:

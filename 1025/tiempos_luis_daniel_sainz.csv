@@ -1,28 +1,42 @@
-Cantidad de Elementos,Algoritmo,Éxito,Tiempo (microsegundos)
-100, Bubble Sort, Sí, 349.4
-100, Heap Sort, Sí, 138.5
-100, Insertion Sort, Sí, 181.7
-100, Merge Sort, Sí, 128.6
-100, Quick Sort, Sí, 110.5
-100, Selection Sort, Sí, 178.6
-1_000, Bubble Sort, Sí, 37_642.6
-1_000, Heap Sort, Sí, 1_787.9
-1_000, Insertion Sort, Sí, 16_604.7
-1_000, Merge Sort, Sí, 1_159.6
-1_000, Quick Sort, Sí, 1_071.1
-1_000, Selection Sort, Sí, 15_894.1
-10_000, Bubble Sort, Sí, 3_804_837.8
-10_000, Heap Sort, Sí, 25_788.0
-10_000, Insertion Sort, Sí, 1_839_767.4
-10_000, Merge Sort, Sí, 11_392.9
-10_000, Quick Sort, Sí, 12_859.7
-10_000, Selection Sort, Sí, 1_641_669.8
-100_000, Bubble Sort, Sí, 481_799_954.0
-100_000, Heap Sort, Sí, 453_707.4
-100_000, Insertion Sort, Sí, 305_900_617.4
-100_000, Merge Sort, Sí, 145_798.6
-100_000, Quick Sort, Sí, 240_794.8
-100_000, Selection Sort, Sí, 272_142_212.4
-1_000_000, Heap Sort, Sí, 7_130_907.8
-1_000_000, Merge Sort, Sí, 1_497_037.1
-1_000_000, Quick Sort, Sí, 2_969_985.6
+Elementos,Algoritmo,Éxito,Tiempo (ms)
+100,Bubble Sort,Sí,239.461
+100,Bucket Sort,Sí,32.612
+100,Counting Sort,Sí,19.266
+100,Heap Sort,Sí,102.784
+100,Insertion Sort,Sí,108.715
+100,Merge Sort,Sí,97.755
+100,Quick Sort,Sí,85.582
+100,Selection Sort,Sí,119.335
+100,Shell Sort,Sí,50.044
+1_000,Bubble Sort,Sí,34_952.514
+1_000,Bucket Sort,Sí,233.62
+1_000,Counting Sort,Sí,275.21
+1_000,Heap Sort,Sí,1_704.856
+1_000,Insertion Sort,Sí,19_964.062
+1_000,Merge Sort,Sí,1_076.921
+1_000,Quick Sort,Sí,966.372
+1_000,Selection Sort,Sí,14_454.606
+1_000,Shell Sort,Sí,1_103.732
+10_000,Bubble Sort,Sí,3_307_042.251
+10_000,Bucket Sort,Sí,2_366.765
+10_000,Counting Sort,Sí,3_706.983
+10_000,Heap Sort,Sí,28_145.142
+10_000,Insertion Sort,Sí,1_888_060.582
+10_000,Merge Sort,Sí,10_482.355
+10_000,Quick Sort,Sí,14_126.319
+10_000,Selection Sort,Sí,1_601_114.226
+10_000,Shell Sort,Sí,35_256.147
+100_000,Bubble Sort,Sí,374_551_245.552
+100_000,Bucket Sort,Sí,31_082.927
+100_000,Counting Sort,Sí,59_599.796
+100_000,Heap Sort,Sí,481_386.134
+100_000,Insertion Sort,Sí,186_915_153.695
+100_000,Merge Sort,Sí,101_399.202
+100_000,Quick Sort,Sí,139_590.269
+100_000,Selection Sort,Sí,165_236_545.755
+100_000,Shell Sort,Sí,307_635.093
+1_000_000,Bucket Sort,Sí,333_703.901
+1_000_000,Counting Sort,Sí,780_400.484
+1_000_000,Heap Sort,Sí,4_964_682.175
+1_000_000,Merge Sort,Sí,897_074.981
+1_000_000,Quick Sort,Sí,1_762_866.975
