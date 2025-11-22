@@ -1,0 +1,2 @@
+1. algoritmo de busqueda binaria
+2. algoritmo de busqueda secuencial
