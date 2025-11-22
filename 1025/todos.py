@@ -9,7 +9,6 @@ import os
 
 from quick_sort import ordenar as qs
 from merge_sort import ordenar as ms
-from seleccionshort import ordenar as ss
 
 # 100, 1_000, 10_000, 100_000, 1_000_000
 cantidad_de_elementos = 100
@@ -46,23 +45,17 @@ def main():
     print(f"Ordenando {cantidad_de_elementos:_} elementos")
     duracion_qs = obtener_tiempo("Quicksort", qs, lista)
     duracion_ms = obtener_tiempo("Merge sort", ms, lista)
-    duracion_ss = obtener_tiempo("Selection sort", ss, lista)
-    
-   
+
     es_nuevo = True
     if os.path.exists(nombre_de_archivo_de_tiempos):
             es_nuevo = False
     with open(nombre_de_archivo_de_tiempos,"a", encoding="utf-8") as archivo:
         if es_nuevo:
             archivo.write("Algoritmo,Cantidad de elementos,Tiempo\n")
-            archivo.write(f"Quicksort,{cantidad_de_elementos:_},{duracion_qs:_}\n")
-            archivo.write(f"Merge sort,{cantidad_de_elementos:_},{duracion_ms:_}\n")
-            archivo.write(f"Selection sort,{cantidad_de_elementos:_},{duracion_ss:_}\n")
-        else:
-            archivo.write("Algoritmo,Cantidad de elementos,Tiempo\n")
-            archivo.write(f"Quicksort,{cantidad_de_elementos:_},{duracion_qs:_}\n")
-            archivo.write(f"Merge sort,{cantidad_de_elementos:_},{duracion_ms:_}\n")
-            archivo.write(f"Selection sort,{cantidad_de_elementos:_},{duracion_ss:_}\n")
+        archivo.write(f"Quicksort,{cantidad_de_elementos:_},{duracion_qs:_}\n")
+        archivo.write(f"Merge sort,{cantidad_de_elementos:_},{duracion_ms:_}\n")
+
+
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,32 @@
+Algoritmo,Cantidad de elementos,Tiempo
+Bubble sort,100,478.438
+Bucket sort,100,345.251
+Heapsort,100,479.225
+Insertion sort,100,478.438
+Merge sort,100,345.251
+Quick sort,100,479.225
+Seleccionshort,100,479.225
+Algoritmo,Cantidad de elementos,Tiempo
+Bubble sort,1_000,16_887.191
+Bucket sort,1_000,1_404.209
+Heapsort,1_000,17_002.303
+Insertion sort,1_000,16_887.191
+Merge sort,1_000,1_404.209
+Quick sort,1_000,17_002.303
+Seleccionshort,1_000,17_002.303
+Algoritmo,Cantidad de elementos,Tiempo
+Bubble sort,10_000,1_891_940.745
+Bucket sort,10_000,11_169.829
+Heapsort,10_000,1_675_712.284
+Insertion sort,10_000,1_891_940.745
+Merge sort,10_000,11_169.829
+Quick sort,10_000,1_675_712.284
+Seleccionshort,10_000,1_675_712.284
+Algoritmo,Cantidad de elementos,Tiempo
+Bubble sort,100_000,248_716_750.762
+Bucket sort,100_000,138_994.767
+Heapsort,100_000,201_237_595.236
+Insertion sort,100_000,248_716_750.762
+Merge sort,100_000,138_994.767
+Quick sort,100_000,201_237_595.236
+Seleccionshort,100_000,201_237_595.236
