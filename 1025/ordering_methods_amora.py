@@ -68,7 +68,7 @@ def verification(ordered_list: list) -> bool:
 
 def save_results(items_amount: int, algorithm_name: str, ordered: bool, total_time: float):
     """Guarda los resultados en el archivo CSV"""
-    with open('tiempos_amora.csv', 'a', newline='', encoding='utf-8') as file:
+    with open('tiempos_alan_eduardo_vazquez_mora.csv', 'a', newline='', encoding='utf-8') as file:
         success = "Sí" if ordered else "No"
         file.write(f"{items_amount:_},{algorithm_name},{success},{total_time:_.2f}\n")
 
@@ -90,7 +90,7 @@ def main():
     )
 
     # Crear archivo CSV con encabezados
-    with open('tiempos_amora.csv', 'w', newline='', encoding='utf-8') as file:
+    with open('tiempos_alan_eduardo_vazquez_mora.csv', 'w', newline='', encoding='utf-8') as file:
         csv.writer(file).writerow(["Elementos", "Algoritmo", "Éxito", "Tiempo (µs)"])
 
     total_tests = sum(1 for amount in items_amounts for alg in algorithms
@@ -120,7 +120,7 @@ def main():
             status = "OK" if ordered else "FALLO"
             print(f"{status} - {total_time:,.2f} µs")
 
-    print(f"\nResultados guardados en 'tiempos_amora.csv'")
+    print(f"\nResultados guardados en 'tiempos_alan_eduardo_vazquez_mora.csv'")
 
 
 if __name__ == "__main__":
